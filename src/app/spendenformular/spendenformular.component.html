@@ -1,1 +1,16 @@
-<p>spendenformular works!</p>
+<form class="form" [formGroup]="donationForm" (ngSubmit)="onSubmit()">
+    <div class="field">
+        <label class="label">Art der Kleidung</label>
+        <input type="text" class="input" formControlName="artDerKleidung" />
+    </div>
+    <div class="">
+        <label class="label">Krisengebiet</label>
+        <select type="text" class="input" formControlName="krisenGebiet">
+            <option value="" disabled selected hidden >Bitte auswählen</option>
+            <option value="ukraine">Ukraine</option>
+            <option value="gazaStreifen">Gazastreifen</option>
+            <option value="libanon">Libanon</option>
+            <option value="südpol">Südpol</option>
+        </select>
+    </div>
+</form>
