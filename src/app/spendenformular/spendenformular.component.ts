@@ -9,13 +9,15 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './spendenformular.component.scss'
 })
 export class SpendenformularComponent {
-  donationForm = this.fb.group( {
+  spendenFormular = this.fb.group( {
     artDerKleidung: "",
     krisenGebiet:"",
+    abgabeOrt:"",
+    adresse:"",
   })
   constructor(private fb: FormBuilder) {}
 
   onSubmit(): void {
-    console.log("Registrierte Spende:", this.donationForm.value)
+    console.log("Registrierte Spende:", this.spendenFormular.value);
   }
 }
