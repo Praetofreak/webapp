@@ -12,8 +12,13 @@ export class SpendenformularComponent {
   spendenFormular = this.fb.group( {
     artDerKleidung: "",
     krisenGebiet:"",
+    mailAdresse:"",
     abgabeOrt:"",
-    adresse:"",
+    vorName:"",
+    nachName:"",
+    straße:"",
+    stadt:"",
+    plz:"",
   })
   constructor(private fb: FormBuilder) {}
 
