@@ -10,15 +10,17 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 })
 export class SpendenformularComponent {
   spendenFormular = this.fb.group( {
-    artDerKleidung: "",
-    krisenGebiet:"",
-    mailAdresse:"",
-    abgabeOrt:"",
-    vorName:"",
-    nachName:"",
-    straße:"",
-    stadt:"",
-    plz:"",
+    artDerKleidung: [""],
+    krisenGebiet:[""],
+    mailAdresse:[""],
+    abgabeOrt:[""],
+    adresse: this.fb.group({
+      vorName:[""],
+      nachName:[""],
+      straße:[""],
+      stadt:[""],
+      plz:[""],
+    })
   })
   constructor(private fb: FormBuilder) {}
 
