@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ErfolgsseiteComponent } from './erfolgsseite.component';
+import { GespendetComponent } from './gespendet.component';
 
-describe('ErfolgsseiteComponent', () => {
-  let component: ErfolgsseiteComponent;
-  let fixture: ComponentFixture<ErfolgsseiteComponent>;
+describe('GespendetComponent', () => {
+  let component: GespendetComponent;
+  let fixture: ComponentFixture<GespendetComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ErfolgsseiteComponent]
+      imports: [GespendetComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ErfolgsseiteComponent);
+    fixture = TestBed.createComponent(GespendetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

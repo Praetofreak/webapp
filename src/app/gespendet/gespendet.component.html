@@ -1,0 +1,29 @@
+<div class="flex items-center justify-center flex-col">
+  @for(spende of spendenService.spenden; track spende.id){
+  <div class="w-1/2 mb-8 p-4 shadow rounded">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-lg font-semibold text-gray-900">
+          {{ spende.destination }}
+        </p>
+        <p class="text-sm text-gray-600">{{ spende.donationType }}</p>
+      </div>
+      <div>
+        <p class="text-lg font-semibold text-gray-900">{{ spende.email }}</p>
+      </div>
+      <div>
+        <p class="text-lg font-semibold text-gray-900">
+          {{ spende.handover }}
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-sm text-gray-600">{{ spende.adresse.strasse }}</p>
+        <p class="text-sm text-gray-600">{{ spende.adresse.stadt }}</p>
+        <p class="text-sm text-gray-600">{{ spende.adresse.plz }}</p>
+      </div>
+    </div>
+  </div>
+  }
+</div>
