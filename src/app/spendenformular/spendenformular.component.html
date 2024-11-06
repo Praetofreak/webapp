@@ -1,5 +1,5 @@
 <form class="flex items-center justify-center" [formGroup]="spendenFormular" (ngSubmit)="onSubmit()">
-    <div class="flex flex-col border rounded-md gray-900/10 p-12 shadow-md sm:w-1/2">
+    <div class="flex flex-col border rounded-md gray-900/10 p-12 shadow-md lg:w-1/2">
         <div class="items-start space-y-12">
             <!-- Überschrift -->
             <div>
@@ -55,7 +55,7 @@
                 </div>
             </fieldset>
 
-            <!-- Angabe Abgabeort. Wird ausgeblichen dargestellt falls Übergabe an Geschäftsstelle ausgewählt ist. Padding nach Spendenknopf anpassen? Trennlinien zwischen Abschnitten? -->
+            <!-- Angabe Abgabeort. Wird verblichen dargestellt falls Übergabe an Geschäftsstelle ausgewählt ist. -->
             <div class="border-b border-gray-900/10 pb-12" [ngClass]="{'opacity-50': spendenFormular.get('handover')?.value=='geschäftsstelle'}" formGroupName="adresse">
                 <label class="block text-sm font-semibold leading-6 text-gray-900">Adressdaten</label>
                 <p class="mt-1 text-sm leading-6 text-gray-600">Bitte geben Sie die Adresse an, an der die Spende abgeholt werden kann.</p>

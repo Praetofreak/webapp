@@ -56,6 +56,7 @@ export class SpendenformularComponent {
     });
   }
 
+  // Aktion bei Klick auf "Jetzt spenden"
   onSubmit() {
     if (this.spendenFormular.valid) {
       this.spendenService.addSpende(this.spendenFormular.value as SpendeModel);
