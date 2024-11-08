@@ -24,22 +24,46 @@ export class SpendenformularComponent {
   spendenService = inject(SpendenService);
   
   spendenFormular = this.fb.group({
-    donationType: [''],
-    destination: [''],
-    email: [''],
-    handover: [''],
+    donationType: [
+      '',
+      [Validators.required],
+    ],
+    destination: [
+      '',
+      [Validators.required],
+    ],
+    email: [
+      '',
+      [Validators.required],
+    ],
+    handover: [
+      '',
+      [Validators.required],
+    ],
     adresse: this.fb.group({
-      vorName: [''],
-      nachName: [''],
-      strasse: [''],
-      stadt: [''],
+      vorName: [
+        '',
+        [Validators.required],
+      ],
+      nachName: [
+        '',
+        [Validators.required],
+      ],
+      strasse: [
+        '',
+        [Validators.required],
+      ],
+      stadt: [
+        '',
+        [Validators.required],
+      ],
       plz: [
         '',
         [
           Validators.required,
           Validators.minLength(5),
           Validators.maxLength(5),
-          this.zipCodeValidator(/^0213/i),
+          this.zipCodeValidator(/^99\d*$/),
         ],
       ],
     }),
