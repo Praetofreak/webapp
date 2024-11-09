@@ -1,29 +1,32 @@
 <div class="flex items-center justify-center flex-col">
   @for(spende of spendenService.spenden; track spende.id){
-  <div class="w-1/2 mb-8 p-4 shadow rounded">
-    <div class="flex items-center justify-between">
-      <div>
-        <p class="text-lg font-semibold text-gray-900">
-          {{ spende.destination }}
-        </p>
-        <p class="text-sm text-gray-600">{{ spende.donationType }}</p>
+    <div class="w-3/4 lg:w-1/2 mb-8 p-6 shadow rounded bg-white">
+      
+      <div class="flex items-center justify-between mb-4">
+        <div class="w-2/3">
+          <p class="text-lg font-semibold text-gray-900">
+            {{ spende.destination }}
+          </p>
+          <p class="text-sm text-gray-600 break-words max-h-20 overflow-hidden">{{ spende.donationType }}</p>
+        </div>
+        <div class="w-1/3 text-right">
+          <p class="text-lg font-semibold text-gray-900">{{ spende.email }}</p>
+        </div>
       </div>
-      <div>
-        <p class="text-lg font-semibold text-gray-900">{{ spende.email }}</p>
+      
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm text-gray-600">{{ spende.adresse.strasse }}</p>
+          <p class="text-sm text-gray-600">{{ spende.adresse.stadt }}</p>
+          <p class="text-sm text-gray-600">{{ spende.adresse.plz }}</p>
+        </div>
+        <div>
+          <p class="text-lg font-semibold text-gray-900">
+            {{ spende.handover }}
+          </p>
+        </div>
       </div>
-      <div>
-        <p class="text-lg font-semibold text-gray-900">
-          {{ spende.handover }}
-        </p>
-      </div>
+
     </div>
-    <div class="flex items-center justify-between">
-      <div>
-        <p class="text-sm text-gray-600">{{ spende.adresse.strasse }}</p>
-        <p class="text-sm text-gray-600">{{ spende.adresse.stadt }}</p>
-        <p class="text-sm text-gray-600">{{ spende.adresse.plz }}</p>
-      </div>
-    </div>
-  </div>
   }
 </div>
