@@ -4,7 +4,7 @@ export interface SpendeModel {
   destination: string;
   email: string;
   handover: string;
-  adresse: {
+  adresse?: {
     vorName: string;
     nachName: string;
     strasse: string;

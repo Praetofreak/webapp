@@ -17,8 +17,8 @@ export class SpendenService {
         nachName: 'Doe',
         strasse: 'Main Street 1',
         stadt: 'Sample City',
-        plz: '12345'
-      }
+        plz: '12345',
+      },
     },
     {
       id: 2,
@@ -31,13 +31,15 @@ export class SpendenService {
         nachName: 'Smith',
         strasse: 'Second Street 2',
         stadt: 'Example Town',
-        plz: '67890'
-      }
-    }
+        plz: '67890',
+      },
+    },
   ];
 
   addSpende(spende: SpendeModel) {
     spende.id = this.spenden.length + 1;
     this.spenden.push(spende);
+    console.log(this.spenden);
+    console.log(spende)
   }
 }
