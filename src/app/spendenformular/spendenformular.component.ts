@@ -34,7 +34,10 @@ export class SpendenformularComponent {
     ],
     email: [
       '',
-      [Validators.required],
+      [
+      Validators.required,
+      Validators.email,
+      ],
     ],
     handover: [
       '',

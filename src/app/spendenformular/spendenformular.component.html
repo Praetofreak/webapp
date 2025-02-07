@@ -43,6 +43,11 @@
                 <div *ngIf="spendenFormular.get('email')?.invalid && (spendenFormular.get('email')?.dirty || spendenFormular.get('email')?.touched)"
                 class="text-red-900">
                     <div *ngIf="spendenFormular.get('email')?.errors?.['required']">E-Mail-Adresse ist ein Pflichtfeld</div>
+              <!--  <div *ngIf="spendenFormular.get('email')?.errors?.['email']">Bitte geben Sie eine gültige Adresse ein</div> -->
+                </div>
+                <div *ngIf="spendenFormular.get('email')?.invalid && (spendenFormular.get('email')?.touched)"
+                class="text-red-900">
+                    <div *ngIf="spendenFormular.get('email')?.errors?.['email']">Bitte geben Sie eine gültige Adresse ein</div>
                 </div>
             </div>
 
